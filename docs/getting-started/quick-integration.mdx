@@ -1,0 +1,68 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Quick integration
+
+In this segment, we'll guide you through a swift integration with Numexa as your Co-pilot. We'll walk you through an illustration using an OpenAI request, demonstrating various methods to channel it through Numexa.
+
+Explore integration samples with other providers like Anthropic, Cohere, Hugging face. by clicking here. [Click here](https://github.com/NumexaHQ)
+
+<Tabs>
+
+  <TabItem value="go" label="Python" default>
+
+```python
+import openai
+
+# Set Portkey as the base path
+openai.api_base = "https://app.numexa.io/v1/proxy"
+
+response = openai.Completion.create(
+  model="text-davinci-003",
+  prompt="Give me meaning of this text: '{}'",
+  temperature=0.5,
+  headers={
+    "X-Numexa-Api-Key": "<NUMEXA_API_KEY>",
+  }
+)
+
+print(response.choices[0].text.strip())
+```
+
+  </TabItem>
+  <TabItem value="js" label="NodeJS">
+
+```js
+const { Configuration, OpenAIApi } = require("openai");
+const configuration = new Configuration({
+  apiKey: "<OPENAI_API_KEY>",
+  basePath: "https://app.numexa.io/v1/proxy",
+  baseOptions: {
+    headers: {
+      "X-Numexa-Api-Key": "<NUMEXA_API_KEY>",
+    },
+  },
+});
+
+const openai = new OpenAIApi(configuration);
+
+async function generateCompletion() {
+  const response = await openai.createCompletion({
+    model: "text-davinci-003",
+    prompt: "Hello? How are you doing?",
+    max_tokens: 150,
+    temperature: 0,
+  });
+
+  console.log(response.data.choices[0].text);
+}
+
+generateCompletion();
+```
+
+  </TabItem>
+</Tabs>
