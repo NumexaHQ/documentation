@@ -19,7 +19,7 @@ Explore integration samples with other providers like Anthropic, Cohere, Hugging
 import openai
 
 # Set Numexa as the base path
-openai.api_base = "https://app.numexa.io/v1/proxy"
+openai.api_base = "https://app.numexa.io/proxy/v1"
 
 response = openai.Completion.create(
   model="text-davinci-003",
@@ -40,7 +40,7 @@ print(response.choices[0].text.strip())
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
   apiKey: "<OPENAI_API_KEY>",
-  basePath: "https://app.numexa.io/v1/proxy",
+  basePath: "https://app.numexa.io/proxy/v1",
   baseOptions: {
     headers: {
       "X-Numexa-Api-Key": "<NUMEXA_API_KEY>",
