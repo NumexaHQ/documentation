@@ -11,6 +11,7 @@ const config = {
     "⚡️ Transform AI/ML operations: Transparency, Control and Cost Optimization. ⚡️",
   favicon: "img/favicon.ico",
 
+  // 
   // Set the production url of your site here
   url: "https://numexahq.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
