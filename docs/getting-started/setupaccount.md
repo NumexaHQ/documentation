@@ -8,7 +8,7 @@ Unlock the Full Potential: Get Started with Your Numexa Account
 
 #### Step-1: Setting up your account on Numexa is a breeze:
 
-1. Visit cloud.numexa.io
+1. Visit https://app.numexa.io/
 2. Click on "Sign Up"
 3. Follow the sign-up flow to create your account
 
