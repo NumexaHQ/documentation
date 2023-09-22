@@ -66,17 +66,3 @@ generateCompletion();
 
   </TabItem>
 </Tabs>
-
-## Enable Caching
-
-Numexa provides two distinctive caching options to improve performance and streamline response retrieval:
-the Fixed String Matching Cache, also known as the Simple Cache, and the Semantic Cache
-
-Pass the `X-Numexa-Cache` header with the value `true` to enable the cache. By default the cache is disabled.
-
-```
-headers = {
-    "X-Numexa-Api-Key": "<NUMEXA_API_KEY>",
-    "X-Numexa-Cache": "true"
-   }
-```
