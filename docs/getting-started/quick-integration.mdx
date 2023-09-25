@@ -20,7 +20,7 @@ import openai
 
 # Set Numexa as the base path
 openai.api_base = "https://app.numexa.io/proxy/v1/openai"
-openai_api.api_key = ""
+openai_api.api_key = "" // keep it as it is if you are using numexa credits
 
 response = openai.ChatCompletion.create(
   model="gpt-3.5-turbo",
@@ -40,7 +40,7 @@ print(response.choices[0].text.strip())
 ```js
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey: "<OPENAI_API_KEY>",
+  apiKey: "<OPENAI_API_KEY>", // leave empty strings if you are using Numexa credits
   basePath: "https://app.numexa.io/proxy/v1/openai",
   baseOptions: {
     headers: {
