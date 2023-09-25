@@ -20,18 +20,17 @@ import openai
 
 # Set Numexa as the base path
 openai.api_base = "https://app.numexa.io/proxy/v1/openai"
-openai_api.api_key = "" // keep it as it is if you are using numexa credits
 
-response = openai.ChatCompletion.create(
-  model="gpt-3.5-turbo",
-  prompt="Give me meaning of this text: '{}'",
-  temperature=0.5,
+openai.api_key = "" # keep it as it is if you are using numexa credits
+
+response = openai.ChatCompletion.create(model="gpt-3.5-turbo",
+    messages=[{"role": "user", "content": "Hello world"}],
   headers={
     "X-Numexa-Api-Key": "<NUMEXA_API_KEY>",
   }
 )
 
-print(response.choices[0].text.strip())
+print(response)
 ```
 
   </TabItem>
